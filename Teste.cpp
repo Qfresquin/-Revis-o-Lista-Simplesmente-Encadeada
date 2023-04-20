@@ -183,7 +183,7 @@ struct Lista {
 			No *aux = cabeca;
 			int posicao = 1;
 
-    		 while (aux->prox != NULL){
+    		 while (aux != NULL){
     			if (aux->valor == v){
         			aux = aux->prox;
 					removerPosicao(posicao);
@@ -192,7 +192,6 @@ struct Lista {
   				posicao++;} 
  	   			
 			}
-			while (cauda->valor == v ) removerFinal();
 		}
 	}
 	
@@ -222,8 +221,10 @@ int main() {
     
 
 	l.removerRecorrencias(5);
+	l.inserirFinal(5);
+	l.inserirFinal(4);
 	l.inserirSeNExistir(5);
-	printf ("\n %d \n \n", l.tamanho());
+
     l.imprimir();
 
 
